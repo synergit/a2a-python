@@ -34,7 +34,7 @@ logging.basicConfig()
 
 @click.command()
 @click.option('--host', 'host', default='localhost')
-@click.option('--port', 'port', default=9999)
+@click.option('--port', 'port', default=10007)
 def main(host: str, port: int):
     # Verify an API key is set.
     # Not required if using Vertex AI APIs.
