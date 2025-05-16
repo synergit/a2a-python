@@ -19,9 +19,27 @@ This example shows how to create an A2A Server that uses an ADK-based Agent that
    echo "GOOGLE_CLIENT_ID=your_client_id_here" >> .env
    echo "GOOGLE_CLIENT_SECRET=your_client_secret_here" >> .env
    ```
+References:
+[Gemini API key](https://aistudio.google.com/apikey)
+[Google Client ID & Secret](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid)
 
 2. Run the example
 
    ```bash
    uv run .
    ```
+
+# Troubleshooting
+
+Error
+```log
+Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+```
+Solution
+<br>
+1. Install the gcloud CLI 
+2. To initialize the gcloud CLI, run `gcloud init`
+3. Login for ADC(Application Default Credentials) `gcloud auth application-default login`
+References:
+[Install the gcloud CLI](https://cloud.google.com/sdk/docs/install)
+[Set up Application Default Credentials](https://cloud.google.com/docs/authentication/external/set-up-adc)
